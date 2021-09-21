@@ -1,0 +1,19 @@
+* scale: 1e6 units = 1 micron
+
+.subckt comparator-decision VPAMP VNAMP VOP VON VGND VPWR
+
+* voltage to current
+X0 VPWR VPAMP VOP VPWR sky130_fd_pr__pfet_g5v0d10v5 w=1.5e+6u l=0.5e+6u
+X1 VPWR VNAMP VON VPWR sky130_fd_pr__pfet_g5v0d10v5 w=1.5e+6u l=0.5e+6u
+
+* decision feedback
+X2 VOP VOP ISINK VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+X3 VOP VON ISINK VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+
+X4 VON VOP ISINK VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+X5 VON VON ISINK VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+
+* current sink
+X6 ISINK ISINK VGND VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+
+.ends

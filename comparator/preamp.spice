@@ -1,0 +1,19 @@
+* SPICE3 file created from preamp.ext - technology: sky130A
+
+.option scale=1u
+
+X0 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=-0 pd=0 as=-0 ps=0 w=1.5e+06 l=500000
+X1 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=-0 pd=0 as=-0 ps=0 w=1.5e+06 l=500000
+X2 VPAMP VPAMP VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=-0 ps=0 w=1.5e+06 l=500000
+X3 VNAMP VNAMP VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=-0 ps=0 w=1.5e+06 l=500000
+X4 VGND BIASN VI VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=-0 ps=0 w=1e+06 l=600000
+X5 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X6 VI BIASN VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X7 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X8 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X9 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X10 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X11 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=0 ps=0 w=1e+06 l=600000
+X12 VI VN VNAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0 pd=0 as=-0 ps=0 w=1e+06 l=600000
+X13 VI VP VPAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0 pd=0 as=-0 ps=0 w=1e+06 l=600000
+C0 VPWR VGND 8.16fF

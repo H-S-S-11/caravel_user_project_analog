@@ -1,0 +1,21 @@
+.subckt tristate-inverter Y A OE ~OE VGND VPWR
+* NGSPICE file created from tristate-inverter.ext - technology: sky130A
+
+* Top level circuit tristate-inverter with output pullup
+
+R1 VPWR Y 100k
+
+X0 Y ~OE a_150000_0# VPWR sky130_fd_pr__pfet_01v8 w=1e+06u l=150000u
+X1 Y OE a_150000_n1500000# VGND sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+X2 a_150000_0# A VPWR VPWR sky130_fd_pr__pfet_01v8 w=1e+06u l=150000u
+X3 a_150000_n1500000# A VGND VGND sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+
+
+* 
+* X0 pfet_middle A VPWR VPWR sky130_fd_pr__pfet_01v8 w=1e+06u l=150000u
+* X2 Y ~OE pfet_middle VPWR sky130_fd_pr__pfet_01v8 w=1e+06u l=150000u
+* 
+* X1 nfet_middle A VGND VGND sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+* X3 Y OE nfet_middle VGND sky130_fd_pr__nfet_01v8 w=650000u l=150000u
+
+.ends
