@@ -19,21 +19,22 @@ Vdd1v8 VDD  VGND 1.8
 Vbias BIASN VGND 0.3
 
 VNin VN VGND 1.5
-VPin VP VGND 1.5
 
-* create pulse
+
+* create VP-in
 *VPin VP VGND pulse(0 3 1p 1n 1n 1n 2n)
-*VPin VP VGND SINE(1.5 0.01 10Meg)
+VPin VP VGND SINE(1.5 0.1 100Meg)
+*VPin VP VGND 1.5
 
-*.tran 10e-12 200e-09 0e-00
-.dc VPin 0 3 0.002 VNin 0 3 0.2
+.tran 10e-12 20e-09 0e-00
+*.dc VPin 0 3 0.002 VNin 0 3 0.2
 
 .control
 run
 set color0 = white
 set color1 = black
 plot VOUT
-*plot VP VN VOUT VPWR
+plot VP VN VOUT VPWR
 *plot VPAMP VNAMP VI
 *plot VOP VON
 *plot i(Vdd3v3)

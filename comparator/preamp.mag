@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1632245862
+timestamp 1632332974
 << nwell >>
 rect 60 1210 150 1540
 rect 0 1170 150 1210
@@ -129,25 +129,25 @@ rect 40 820 710 840
 rect 840 840 860 1020
 rect 950 840 970 1020
 rect 840 820 970 840
+use sky130_fd_pr__pfet_g5v0d10v5_CABTE7  sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0
+timestamp 1632332974
+transform 1 0 53 0 1 1136
+box -308 -1251 308 1251
+use sky130_fd_pr__nfet_03v3_nvt_ZJHJCF  sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0
+timestamp 1632332784
+transform 1 0 783 0 1 1140
+box -288 -985 288 985
 use sky130_fd_pr__nfet_03v3_nvt_DWHJCV  sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0
 timestamp 1632244313
 transform 1 0 1532 0 1 1151
 box -377 -776 377 776
-use sky130_fd_pr__nfet_03v3_nvt_ZJHJCF  sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0
-timestamp 1632244518
-transform 1 0 783 0 1 1140
-box -288 -985 288 985
-use sky130_fd_pr__pfet_g5v0d10v5_CABTE7  sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0
-timestamp 1632243750
-transform 1 0 53 0 1 1136
-box -308 -1251 308 1251
 << labels >>
 rlabel metal1 640 2380 1760 2460 1 VGND
 rlabel metal1 -80 2420 180 2460 1 VPWR
 rlabel metal1 1480 1100 1580 1200 1 VI
 rlabel metal1 1380 1270 1690 1350 1 BIASN
-rlabel metal1 390 1330 460 1460 1 VPAMP
-rlabel metal1 390 820 460 950 1 VNAMP
 rlabel metal1 600 1160 680 1230 1 VP
 rlabel metal1 600 1050 680 1120 1 VN
+rlabel metal1 610 1330 710 1460 1 VPAMP
+rlabel metal1 610 820 710 950 1 VNAMP
 << end >>
