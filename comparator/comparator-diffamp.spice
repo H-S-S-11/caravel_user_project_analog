@@ -5,19 +5,42 @@
 .subckt comparator-diffamp VOP VON VOUT VGND VPWR
 
 *load transistors
-X0 VPWR VONAMP VOPAMP VPWR sky130_fd_pr__pfet_01v8 w=3e+06u l=0.18e+6u
-X1 VPWR VONAMP VONAMP VPWR sky130_fd_pr__pfet_01v8 w=3e+06u l=0.18e+6u
+* X0 VPWR VONAMP VOPAMP VPWR sky130_fd_pr__pfet_01v8 w=3e+06u l=0.18e+6u
+* X1 VPWR VONAMP VONAMP VPWR sky130_fd_pr__pfet_01v8 w=3e+06u l=0.18e+6u
+* 
+* *diff pair
+* X2 VOPAMP VOP ISINK VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.18e+6u
+* X3 VONAMP VON ISINK VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.18e+6u
+* 
+* * current source
+* X4 ISINK VONAMP VGND VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.18e+6u
+* 
+* *output inverter
+* X5 VPWR VOPAMP VOUT VPWR sky130_fd_pr__pfet_01v8 w=2e+06u l=0.15e+6u
+* X6 VOUT VOPAMP VGND VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.15e+6u
 
-*diff pair
-X2 VOPAMP VOP ISINK VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.18e+6u
-X3 VONAMP VON ISINK VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.18e+6u
-
-* current source
-X4 ISINK VONAMP VGND VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.18e+6u
-
-*output inverter
-X5 VPWR VOPAMP VOUT VPWR sky130_fd_pr__pfet_01v8 w=2e+06u l=0.15e+6u
-X6 VOUT VOPAMP VGND VGND sky130_fd_pr__nfet_01v8 w=1e+06u l=0.15e+6u
+*extracted 
+X0 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0      w=1e+06u l=180000u
+X1 VOPAMP VOP ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0 pd=0 as=-0 ps=0  w=1e+06u l=180000u
+X2 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0      w=1e+06u l=180000u
+X3 VONAMP VON ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0 pd=0 as=-0 ps=0  w=1e+06u l=180000u
+X4 VGND VONAMP ISINK VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=-0 ps=0  w=1e+06u l=180000u
+X5 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0      w=1e+06u l=180000u
+X6 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0      w=1e+06u l=180000u
+X7 VONAMP VONAMP VPWR VPWR sky130_fd_pr__pfet_01v8 ad=-0 pd=0 as=0 ps=0 w=1e+06u l=180000u
+X8 VPWR VONAMP VOPAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06u l=180000u
+X9 VPWR VONAMP VONAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06u l=180000u
+X10 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0     w=1e+06u l=180000u
+X11 VOPAMP VONAMP VPWR VPWR sky130_fd_pr__pfet_01v8 ad=-0 pd=0 as=0 ps=0 w=1e+06u l=180000u
+X12 VPWR VONAMP VONAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06u l=180000u
+X13 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0     w=1e+06u l=180000u
+X14 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0     w=1e+06u l=180000u
+X15 VPWR VONAMP VOPAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06u l=180000u
+X16 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0     w=1e+06u l=180000u
+X17 VPWR VOPAMP VOUT VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0   w=2e+06u l=150000u
+X18 VGND VOPAMP VOUT VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0   w=1e+06u l=150000u
+C0 VPWR VGND 11.52fF
+C1 VONAMP VGND 2.55fF
 
 
 .ends

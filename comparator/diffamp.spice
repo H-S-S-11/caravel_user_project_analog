@@ -1,0 +1,25 @@
+* SPICE3 file created from diffamp.ext - technology: sky130A
+
+.option scale=1u
+
+X0 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X1 VOPAMP VOP ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X2 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X3 VONAMP VON ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X4 VGND VONAMP ISINK VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X5 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X6 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X7 VONAMP VONAMP VPWR VPWR sky130_fd_pr__pfet_01v8 ad=-0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X8 VPWR VONAMP VOPAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X9 VPWR VONAMP VONAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X10 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X11 VOPAMP VONAMP VPWR VPWR sky130_fd_pr__pfet_01v8 ad=-0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X12 VPWR VONAMP VONAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X13 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X14 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X15 VPWR VONAMP VOPAMP VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=-0 ps=0 w=1e+06 l=180000
+X16 VPWR VPWR VPWR VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=180000
+X17 VPWR VOPAMP VOUT VPWR sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=2e+06 l=150000
+X18 VGND VOPAMP VOUT VGND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=1e+06 l=150000
+C0 VPWR VGND 11.52fF
+C1 VONAMP VGND 2.55fF

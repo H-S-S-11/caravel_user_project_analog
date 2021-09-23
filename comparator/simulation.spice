@@ -23,10 +23,10 @@ VNin VN VGND 1.5
 
 * create VP-in
 *VPin VP VGND pulse(0 3 1p 1n 1n 1n 2n)
-VPin VP VGND SINE(1.5 0.1 100Meg)
+VPin VP VGND SINE(1.5 0.1 10Meg)
 *VPin VP VGND 1.5
 
-.tran 10e-12 20e-09 0e-00
+.tran 10e-12 200e-09 0e-00
 *.dc VPin 0 3 0.002 VNin 0 3 0.2
 
 .control
