@@ -9,7 +9,7 @@
 * instantiate the comparator
 *Xpre VP VN VPAMP VNAMP VI BIASN VGND VPWR comparator-preamp
 *Xdec VPAMP VNAMP VOP VON VGND VPWR comparator-decision
-*Xdif VOP VON VOUT VGND VDD comparator-diffamp
+Xdif VP VN VOUTdiff VGND VDD1v8 comparator-diffamp
 
 Xcomp VP VN BIASN VOUT VGND VDD3v3 VDD1v8 comparator-whole
 
@@ -36,7 +36,7 @@ VPin VP VGND SINE(1.5 0.1 10Meg)
 run
 set color0 = white
 set color1 = black
-plot VP VN VOUT VDD3v3 
+plot VP VN VOUT VOUTdiff VDD3v3 
 *plot VPAMP VNAMP VI
 *plot VOP VON
 plot i(Vdd3v3) i(Vdd1v8)
