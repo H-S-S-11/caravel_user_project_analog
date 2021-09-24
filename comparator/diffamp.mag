@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 4
-timestamp 1632405528
+timestamp 1632488633
 << nwell >>
 rect -880 5200 1240 6200
 rect -40 2280 1240 5200
@@ -182,16 +182,15 @@ rect 360 3360 400 3480
 rect -1240 3320 -1200 3360
 rect 200 3320 400 3360
 rect -1360 3280 -1200 3320
-use sky130_fd_pr__nfet_01v8_T49HPK  sky130_fd_pr__nfet_01v8_T49HPK_0
-timestamp 1632403905
-transform 1 0 -1398 0 1 4266
-box -428 -2292 428 2292
 use sky130_fd_pr__pfet_01v8_XAY5ZQ  sky130_fd_pr__pfet_01v8_XAY5ZQ_0
 timestamp 1632400215
 transform 1 0 613 0 1 4240
 box -619 -1946 619 1946
+use sky130_fd_pr__nfet_01v8_T49HPK  sky130_fd_pr__nfet_01v8_T49HPK_0
+timestamp 1632403905
+transform 1 0 -1398 0 1 4266
+box -428 -2292 428 2292
 << labels >>
-rlabel metal1 200 6760 1040 6800 1 VPWR
 rlabel locali -1640 5080 -1560 5160 1 ISINK
 rlabel metal1 -1880 3720 -1840 3840 1 VON
 rlabel metal1 -1880 4720 -1840 4840 1 VOP
@@ -199,4 +198,5 @@ rlabel metal1 -920 5040 -840 5160 1 VOPAMP
 rlabel metal1 -840 3360 -720 3480 1 VONAMP
 rlabel metal1 -1600 6760 -840 6800 1 VGND
 rlabel metal1 -560 6760 -360 6800 1 VOUT
+rlabel metal1 200 6760 1040 6800 1 VDD1v8
 << end >>
