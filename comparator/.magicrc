@@ -69,3 +69,6 @@ catch {magic::query_my_projects}
 
 # set units for grid
 snap on
+
+ext2spice scale off
+ext2spice ngspice
