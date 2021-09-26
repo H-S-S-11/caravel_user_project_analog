@@ -4,15 +4,18 @@
 
 ---
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+## Mixed signal tests
+Collection of analog and mixed signal test circuits.
 
-## Please fill in your project documentation in this README.md file 
+Basic goal: a comparator based on the circuit in "CMOS Design" (Jacob Baker).
 
-
-:warning: | Use this sample project for analog user projects. 
-:---: | :---
+Extra goals:
+-A small array (eg 1x8) of Flash cells for characterisation
+-An alternative comparator layout using only self-biased amplifiers (no bias voltage required)
+-The digital section of delta-sigma ADC
+-Demo charge pump
+-Sample-and-hold circuit
 
 ---
 
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
+Refer to [README](docs/source/index.rst) for the sample project documentation. 
