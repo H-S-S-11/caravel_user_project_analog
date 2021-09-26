@@ -1,5 +1,6 @@
 * SPICE3 file created from comparator.ext - technology: sky130A
 
+.subckt comparator VN VP BIASN VDD3v3 VGND VOUT VDD1v8
 X0 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
 X1 diffamp_0/VOPAMP diffamp_0/VOP diffamp_0/ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
 X2 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
@@ -49,5 +50,7 @@ X45 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=
 C0 decision_0/ISINK VGND 2.29fF
 C1 diffamp_0/VON VGND 3.61fF
 C2 VDD3v3 VGND 13.15fF
-C3 VDD1v8 VGND 12.14fF
-C4 diffamp_0/VONAMP VGND 2.51fF
+C3 BIASN VGND 2.48fF
+C4 VDD1v8 VGND 11.05fF
+C5 diffamp_0/VONAMP VGND 2.51fF
+.ends

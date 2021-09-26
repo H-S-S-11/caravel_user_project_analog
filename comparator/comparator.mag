@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1632490576
+timestamp 1632652117
 << locali >>
 rect 1760 1900 1860 1920
 rect 1760 1840 1780 1900
@@ -46,26 +46,35 @@ rect 1900 860 2000 1220
 rect 460 760 2000 860
 rect 3800 720 3900 840
 rect 2880 620 3900 720
-use diffamp  diffamp_0
-timestamp 1632488633
-transform 1 0 4840 0 1 -1080
-box -940 980 620 3400
-use decision  decision_0
-timestamp 1632485541
-transform 1 0 2020 0 1 145
-box -120 -245 1711 2620
 use preamp  preamp_0
 timestamp 1632332974
 transform 1 0 -145 0 1 115
 box -255 -115 1909 2460
+use decision  decision_0
+timestamp 1632485541
+transform 1 0 2020 0 1 145
+box -120 -245 1711 2620
+use diffamp  diffamp_0
+timestamp 1632488633
+transform 1 0 4840 0 1 -1080
+box -940 980 620 3400
 << labels >>
 rlabel metal1 -440 1270 -430 1350 1 VP
+port 2 n
 rlabel metal1 -440 1160 -430 1240 1 VN
+port 1 n
 rlabel metal1 480 2760 1620 2800 1 VGND
+port 5 n
 rlabel metal1 2720 2760 4420 2800 1 VGND
+port 5 n
 rlabel metal1 -440 1820 -420 1920 1 BIASN
+port 3 n
 rlabel metal1 4560 2760 4660 2800 1 VOUT
+port 6 n
 rlabel metal1 4940 2760 5360 2800 1 VDD1v8
+port 7 n
 rlabel metal1 2060 2760 2400 2800 1 VDD3v3
+port 4 n
 rlabel metal1 -240 2760 40 2800 1 VDD3v3
+port 4 n
 << end >>
