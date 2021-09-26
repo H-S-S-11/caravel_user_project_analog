@@ -10,11 +10,12 @@ Collection of analog and mixed signal test circuits.
 Basic goal: a comparator based on the circuit in "CMOS Design" (Jacob Baker).
 
 Extra goals:
--A small array (eg 1x8) of Flash cells for characterisation
--An alternative comparator layout using only self-biased amplifiers (no bias voltage required)
--The digital section of delta-sigma ADC
--Demo charge pump
--Sample-and-hold circuit
+
+- A small array (eg 1x8) of Flash cells for characterisation
+- An alternative comparator layout using only self-biased amplifiers (no bias voltage required)
+- The digital section of delta-sigma ADC
+- Demo charge pump
+- Sample-and-hold circuit
 
 ---
 
