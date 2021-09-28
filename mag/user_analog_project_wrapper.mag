@@ -1,11 +1,6 @@
 magic
 tech sky130A
-timestamp 1620244087
-<< checkpaint >>
-rect -680 351370 292680 352680
-rect -680 630 630 351370
-rect 291370 630 292680 351370
-rect -680 -680 292680 630
+timestamp 1632865452
 << metal2 >>
 rect 262 -400 318 240
 rect 853 -400 909 240
@@ -691,6 +686,10 @@ rect -50 352000 292050 352050
 rect -50 0 0 352000
 rect 292000 0 292050 352000
 rect -50 -50 292050 0
+use comparator  comparator_0 /mnt/c/Users/Harry/magic-practice/caravel_user_project_analog/comparator
+timestamp 1632865024
+transform 1 0 2220 0 1 49050
+box -220 -50 2800 1700
 << labels >>
 flabel metal3 s 291760 134615 292400 134671 0 FreeSans 560 0 0 0 gpio_analog[0]
 port 0 nsew signal bidirectional
@@ -2049,5 +2048,5 @@ port 676 nsew signal input
 flabel metal2 s 3217 -400 3273 240 0 FreeSans 560 90 0 0 wbs_we_i
 port 677 nsew signal input
 << properties >>
-string FIXED_BBOX 0 0 292000 352000
+string FIXED_BBOX 0 0 584000 704000
 << end >>

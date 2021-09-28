@@ -2,4 +2,5 @@ precheck_results
 */tmp
 */*/tmp
 /comparator/sky130_fd_pr
+/old-comparator/sky130_fd_pr
 *.ext
