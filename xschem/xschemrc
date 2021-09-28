@@ -258,7 +258,7 @@ set netlist_dir .
 #### list of tcl files to preload.
 # lappend tcl_files ${XSCHEM_SHAREDIR}/change_index.tcl
 lappend tcl_files ${XSCHEM_SHAREDIR}/ngspice_backannotate.tcl
-lappend tcl_files /usr/share/pdk/sky130A/libs.tech/xschem/scripts/sky130_models.tcl
+lappend tcl_files ~/open_sky130/sky130A/libs.tech/xschem/scripts/sky130_models.tcl
 ###########################################################################
 #### XSCHEM TOOLBAR
 ###########################################################################
