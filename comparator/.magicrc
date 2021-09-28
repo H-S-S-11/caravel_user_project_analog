@@ -3,7 +3,7 @@ puts stdout "Sourcing design .magicrc for technology sky130A ..."
 # scale to one
 set scalefac [tech lambda]
 if {[lindex $scalefac 1] < 2} {
-    scalegrid 1 10000
+    scalegrid 1 1
 }
 
 # drc off

@@ -1,56 +1,56 @@
 * SPICE3 file created from comparator.ext - technology: sky130A
 
-.subckt comparator VN VP BIASN VDD3v3 VGND VOUT VDD1v8
-X0 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X1 diffamp_0/VOPAMP diffamp_0/VOP diffamp_0/ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+.subckt comparator VN VP BIASN VDD3v3 VGND VDD1v8 VOUT
+X0 diffamp_0/VOPAMP diffamp_0/VOP diffamp_0/ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X1 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
 X2 VGND VGND VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
 X3 diffamp_0/VONAMP diffamp_0/VON diffamp_0/ISINK VGND sky130_fd_pr__nfet_01v8 ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
 X4 VGND diffamp_0/VONAMP diffamp_0/ISINK VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
-X5 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X6 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X7 diffamp_0/VONAMP diffamp_0/VONAMP VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X8 VDD1v8 diffamp_0/VONAMP diffamp_0/VOPAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
-X9 VDD1v8 diffamp_0/VONAMP diffamp_0/VONAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
-X10 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X11 diffamp_0/VOPAMP diffamp_0/VONAMP VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X12 VDD1v8 diffamp_0/VONAMP diffamp_0/VONAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X5 diffamp_0/VONAMP diffamp_0/VONAMP VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X6 VDD1v8 diffamp_0/VONAMP diffamp_0/VONAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X7 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X8 VDD1v8 diffamp_0/VONAMP diffamp_0/VONAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X9 VDD1v8 diffamp_0/VONAMP diffamp_0/VOPAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X10 VDD1v8 diffamp_0/VONAMP diffamp_0/VOPAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X11 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X12 diffamp_0/VOPAMP diffamp_0/VONAMP VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=-0p pd=0u as=0p ps=0u w=1e+06u l=180000u
 X13 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
 X14 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X15 VDD1v8 diffamp_0/VONAMP diffamp_0/VOPAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=180000u
+X15 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
 X16 VDD1v8 VDD1v8 VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X17 VDD1v8 diffamp_0/VOPAMP VOUT VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2e+06u l=150000u
-X18 VGND diffamp_0/VOPAMP VOUT VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X19 VDD3v3 VDD3v3 VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X20 VDD3v3 VDD3v3 VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X21 preamp_0/VPAMP preamp_0/VPAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X22 preamp_0/VNAMP preamp_0/VNAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X23 VGND BIASN preamp_0/VI VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X24 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X25 preamp_0/VI BIASN VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X26 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X27 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X28 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X29 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X30 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X31 preamp_0/VI VN preamp_0/VNAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X32 preamp_0/VI VP preamp_0/VPAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X33 VDD3v3 VDD3v3 VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X34 VDD3v3 VDD3v3 VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X35 diffamp_0/VOP preamp_0/VPAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X36 diffamp_0/VON preamp_0/VNAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X17 VGND diffamp_0/VOPAMP VOUT VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X18 VDD1v8 diffamp_0/VOPAMP VOUT VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2e+06u l=150000u
+X19 preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_250000_3270000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n250000_2785000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n540000_3270000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/w_n1540000_n6255000# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X20 preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_250000_590000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n250000_105000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n540000_590000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/w_n1540000_n6255000# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X21 preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_250000_n4770000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n250000_n5255000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n540000_n4770000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/w_n1540000_n6255000# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X22 preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_250000_n2090000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n250000_n2575000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/a_n540000_n2090000# preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/w_n1540000_n6255000# sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X23 preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n145000_n500000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n745000_n940000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n1035000_n500000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/w_n1885000_n3880000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X24 preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n145000_1590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n745000_1150000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n1035000_1590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/w_n1885000_n3880000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X25 preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_745000_n500000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_145000_n940000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n145000_n500000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/w_n1885000_n3880000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X26 preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n145000_n2590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n745000_n3030000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n1035000_n2590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/w_n1885000_n3880000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X27 preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_745000_1590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_145000_1150000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n145000_1590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/w_n1885000_n3880000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X28 preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_745000_n2590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_145000_n3030000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/a_n145000_n2590000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_DWHJCV_0/w_n1885000_n3880000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X29 preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_300000_2635000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n300000_2195000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n590000_2635000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/w_n1440000_n4925000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X30 preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_300000_n1545000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n300000_n1985000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n590000_n1545000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/w_n1440000_n4925000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X31 preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_300000_545000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n300000_105000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n590000_545000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/w_n1440000_n4925000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X32 preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_300000_n3635000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n300000_n4075000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/a_n590000_n3635000# preamp_0/sky130_fd_pr__nfet_03v3_nvt_ZJHJCF_0/w_n1440000_n4925000# sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X33 VDD3v3 VDD3v3 VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=-0p pd=0u as=-0p ps=0u w=1.5e+06u l=500000u
+X34 diffamp_0/VOP preamp_0/VPAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=-0p ps=0u w=1.5e+06u l=500000u
+X35 VDD3v3 VDD3v3 VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=-0p pd=0u as=-0p ps=0u w=1.5e+06u l=500000u
+X36 diffamp_0/VON preamp_0/VNAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=-0p ps=0u w=1.5e+06u l=500000u
 X37 decision_0/ISINK diffamp_0/VOP diffamp_0/VOP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X38 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X39 decision_0/ISINK diffamp_0/VON diffamp_0/VON VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X40 decision_0/ISINK diffamp_0/VOP diffamp_0/VON VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X38 decision_0/ISINK diffamp_0/VOP diffamp_0/VON VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X39 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X40 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
 X41 decision_0/ISINK diffamp_0/VON diffamp_0/VOP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X42 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X43 VGND decision_0/ISINK decision_0/ISINK VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-X44 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X42 decision_0/ISINK diffamp_0/VON diffamp_0/VON VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X43 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
+X44 VGND decision_0/ISINK decision_0/ISINK VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
 X45 VGND VGND VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0p pd=0u as=-0p ps=0u w=1e+06u l=600000u
-C0 decision_0/ISINK VGND 2.29fF
-C1 diffamp_0/VON VGND 3.61fF
-C2 VDD3v3 VGND 13.15fF
-C3 BIASN VGND 2.48fF
-C4 VDD1v8 VGND 11.05fF
+C0 VDD3v3 VGND 3.47fF
+C1 decision_0/ISINK VGND 2.29fF
+C2 diffamp_0/VON VGND 2.88fF
+C3 preamp_0/sky130_fd_pr__pfet_g5v0d10v5_CABTE7_0/w_n1540000_n6255000# VGND 4.80fF
+C4 VDD1v8 VGND 10.96fF
 C5 diffamp_0/VONAMP VGND 2.51fF
 .ends
