@@ -8,10 +8,10 @@ Reading gds/user_analog_project_wrapper_erased.gds ..
 "_input" in: _drc_engine.rb:1373
 Elapsed: 0.010s
 "_input" in: _drc_engine.rb:1373
-Elapsed: 0.010s
+Elapsed: 0.020s
 "^" in: _drc_engine.rb:1414
 Elapsed: 0.010s
-XOR differences: 0
+XOR differences: 1
 "_output" in: _drc_engine.rb:1479
 Elapsed: 0.010s
 --- Running XOR for 69/20 ---
@@ -43,6 +43,6 @@ Elapsed: 0.010s
 Elapsed: 0.010s
 XOR differences: 0
 "_output" in: _drc_engine.rb:1479
-Elapsed: 0.010s
+Elapsed: 0.000s
 Writing layout file: gds/user_analog_project_wrapper.xor.gds ..
-Total run time: 0.180s
+Total run time: 0.200s

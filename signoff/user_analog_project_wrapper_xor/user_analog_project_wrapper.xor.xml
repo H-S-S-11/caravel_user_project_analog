@@ -41,5 +41,16 @@
   </cell>
  </cells>
  <items>
+  <item>
+   <tags/>
+   <category>'235/4'</category>
+   <cell>user_analog_project_wrapper</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>polygon: (2920,0;2920,3520;0,3520;0,3624.005;3024.005,3624.005;3024.005,0)</value>
+   </values>
+  </item>
  </items>
 </report-database>
