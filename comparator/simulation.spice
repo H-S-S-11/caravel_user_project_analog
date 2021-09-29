@@ -1,0 +1,40 @@
+* comparator Simulation
+* this file edited to remove everything not in tt lib
+.lib "./sky130_fd_pr/models/sky130.lib.spice" tt
+.include comparator.spice
+
+
+* instantiate the comparator
+Xcomp VP VN BIASN VOUT VGND VDD3v3 VDD1v8 comparator
+
+* set gnd and power
+Vgnd VGND 0 0
+Vdd3v3 VDD3v3 VGND 3
+Vdd1v8 VDD1v8  VGND 1.8
+
+* set bias voltage
+Vbias BIASN VGND 0.3
+
+VNin VN VGND 1.5
+
+
+* create VP-in
+*VPin VP VGND pulse(0 3 1p 1n 1n 1n 2n)
+*VPin VP VGND SINE(1.5 0.1 10Meg)
+VPin VP VGND 1.5
+
+*.tran 10e-12 200e-09 0e-00
+.dc VPin 0 3 0.002 VNin 0 3 0.2
+
+.control
+run
+set color0 = white
+set color1 = black
+plot VOUT VDD3v3
+plot VDD3v3
+*plot VPAMP VNAMP VI
+*plot VOP VON
+plot i(Vdd3v3) i(Vdd1v8)
+.endc
+
+.end
