@@ -1,28 +1,28 @@
 * SPICE3 file created from comparator.ext - technology: sky130A
 
 .subckt comparator VGND VDD3v3 VDD1v8
-X0 a_20_170# a_n10_110# a_20_60# VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X1 VGND BIASN a_20_n240# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X2 a_60_n590# a_220_n150# VDD3v3 VDD3v3 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X3 a_190_n1060# a_170_n620# a_78_n960# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X4 a_220_n250# a_220_n250# VDD3v3 VDD3v3 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X5 VDD1v8 a_60_n990# a_60_n990# VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=3e+06u l=150000u
-X6 a_20_60# a_n10_0# a_20_n40# VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X7 a_20_n560# a_60_n590# a_170_n620# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X8 a_78_n960# a_60_n990# VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X0 VGND BIASN a_20_n240# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X1 a_190_n1060# a_170_n620# a_78_n960# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X2 a_20_170# a_n10_110# a_20_n240# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X3 a_60_n590# a_20_n40# VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X4 VDD1v8 a_60_n990# a_60_n990# VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=3e+06u l=150000u
+X5 a_20_n560# a_60_n590# a_170_n620# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X6 a_78_n960# a_60_n990# VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X7 a_20_170# a_20_170# VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X8 a_20_n240# a_n10_0# a_20_n40# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
 X9 a_20_n560# a_170_n620# a_60_n590# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
 X10 a_78_n960# a_60_n590# a_60_n990# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
-X11 VDD3v3 a_220_n150# a_220_n150# VDD3v3 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X12 a_20_n240# BIASN VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X13 a_60_n590# a_60_n590# a_20_n560# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X14 VOUT a_190_n1060# VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
-X15 VDD1v8 a_190_n1060# VOUT VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2e+06u l=150000u
-X16 VDD3v3 a_220_n250# a_170_n620# VDD3v3 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
-X17 a_170_n620# a_170_n620# a_20_n560# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
-X18 a_190_n1060# a_60_n990# VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=3e+06u l=150000u
+X11 a_20_n240# BIASN VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X12 a_60_n590# a_60_n590# a_20_n560# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X13 VOUT a_190_n1060# VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X14 VDD1v8 a_190_n1060# VOUT VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2e+06u l=150000u
+X15 VDD3v3 a_20_n40# a_20_n40# VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X16 a_170_n620# a_170_n620# a_20_n560# VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X17 a_190_n1060# a_60_n990# VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=3e+06u l=150000u
+X18 VDD3v3 a_20_170# a_170_n620# VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
 X19 a_20_n560# a_60_n790# VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
 C0 VOUT VGND 2.12fF
 C1 a_190_n1060# VGND 2.64fF
 C2 a_60_n990# VGND 2.45fF
-C3 a_60_n590# VGND 2.04fF
+C3 a_60_n590# VGND 2.03fF
 .ends
