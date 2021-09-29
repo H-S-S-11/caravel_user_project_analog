@@ -5,7 +5,7 @@
 
 
 * instantiate the comparator
-Xcomp VP VN BIASN VOUT VGND VDD3v3 VDD1v8 comparator
+Xcomp VGND VDD3v3 VDD1v8 VOUT BIASN VN VP comparator
 
 * set gnd and power
 Vgnd VGND 0 0
@@ -30,8 +30,7 @@ VPin VP VGND 1.5
 run
 set color0 = white
 set color1 = black
-plot VOUT VDD3v3
-plot VDD3v3
+plot VOUT VP VN VDD3v3
 *plot VPAMP VNAMP VI
 *plot VOP VON
 plot i(Vdd3v3) i(Vdd1v8)
