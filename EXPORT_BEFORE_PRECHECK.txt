@@ -1,2 +1,4 @@
-export PDK_ROOT=~
+#( export PDK_ROOT=~ )
+#FOR XOR CHECK: 
+export PDK_ROOT=~/open_sky130
 export CARAVEL_ROOT=~/caravel

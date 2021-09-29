@@ -1,0 +1,48 @@
+First Layout: /home/hss11/caravel//gds/user_analog_project_wrapper_empty_erased.gds
+Second Layout: gds/user_analog_project_wrapper_erased.gds
+Design Name: user_analog_project_wrapper
+Output GDS will be: gds/user_analog_project_wrapper.xor.gds
+Reading /home/hss11/caravel//gds/user_analog_project_wrapper_empty_erased.gds ..
+Reading gds/user_analog_project_wrapper_erased.gds ..
+--- Running XOR for 235/4 ---
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"^" in: _drc_engine.rb:1414
+Elapsed: 0.010s
+XOR differences: 0
+"_output" in: _drc_engine.rb:1479
+Elapsed: 0.010s
+--- Running XOR for 69/20 ---
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"^" in: _drc_engine.rb:1414
+Elapsed: 0.010s
+XOR differences: 0
+"_output" in: _drc_engine.rb:1479
+Elapsed: 0.010s
+--- Running XOR for 70/20 ---
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"^" in: _drc_engine.rb:1414
+Elapsed: 0.010s
+XOR differences: 0
+"_output" in: _drc_engine.rb:1479
+Elapsed: 0.010s
+--- Running XOR for 81/14 ---
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"_input" in: _drc_engine.rb:1373
+Elapsed: 0.010s
+"^" in: _drc_engine.rb:1414
+Elapsed: 0.010s
+XOR differences: 0
+"_output" in: _drc_engine.rb:1479
+Elapsed: 0.010s
+Writing layout file: gds/user_analog_project_wrapper.xor.gds ..
+Total run time: 0.180s
