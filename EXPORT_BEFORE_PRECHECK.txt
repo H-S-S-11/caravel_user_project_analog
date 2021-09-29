@@ -1,0 +1,2 @@
+export PDK_ROOT=~
+export CARAVEL_ROOT=~/caravel
