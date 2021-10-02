@@ -124,7 +124,7 @@ VNin VN VGND 1.5
 
 * create VP-in
 *VPin VP VGND pulse(0 3 1p 1n 1n 1n 2n)
-VPin VP VGND SINE(1.5 0.2 1Meg)
+VPin VP VGND SINE(1.5 0.5 10Meg)
 *VPin VP VGND 1.5
 
 *connect inputs and outputs
@@ -133,7 +133,7 @@ R1 VN gpio_analog[15] 0
 R2 BIASN gpio_analog[16] 0
 R3 VOUT gpio_analog[17] 0
 
-.tran 100e-12 2000e-09 0e-00
+.tran 10e-12 200e-09 0e-00
 *.dc VPin 0 3 0.002 VNin 0 3 0.2
 
 .control

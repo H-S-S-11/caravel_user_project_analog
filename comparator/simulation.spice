@@ -26,10 +26,10 @@ VNin VN VGND 1.5
 
 * create VP-in
 *VPin VP VGND pulse(0 3 1p 1n 1n 1n 2n)
-VPin VP VGND SINE(1.5 0.1 100k)
+VPin VP VGND SINE(1.5 0.05 10000k)
 *VPin VP VGND 1.5
 
-.tran 1000e-12 20000e-09 0e-00
+.tran 10e-12 200e-09 0e-00
 .dc VPin 0 3 0.002 VNin 0 3 0.2
 
 .control
@@ -37,9 +37,6 @@ run
 set color0 = white
 set color1 = black
 plot VOUT VOUT2 VP VN VDD3v3
-plot VPAMP1 VNAMP1 VPAMP VNAMP VI ISINK
-*plot VPAMP VNAMP VI
-*plot VOP VON
 plot i(Vdd3v3) i(Vdd1v8)
 .endc
 

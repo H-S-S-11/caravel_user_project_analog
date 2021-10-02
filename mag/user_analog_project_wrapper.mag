@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1633005286
+timestamp 1633175196
 << locali >>
 rect 1170 49220 1230 49350
 rect 1170 49160 1490 49220
@@ -821,7 +821,7 @@ rect -50 0 0 352000
 rect 292000 0 292050 352000
 rect -50 -50 292050 0
 use comparator  comparator_0
-timestamp 1632928825
+timestamp 1633175196
 transform 1 0 1920 0 1 49050
 box -430 -1100 1450 300
 << labels >>
