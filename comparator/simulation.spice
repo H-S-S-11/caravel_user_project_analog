@@ -8,7 +8,7 @@
 
 
 * instantiate the comparator
-Xcomp VGND VDD3v3 VDD1v8 VOUT BIASN VN VP VPAMP1 VNAMP1 ISINK comparator
+Xcomp VGND VDD3v3 VDD1v8 VOUT BIASN VN VP comparator
 Xpre VP VN VPAMP VNAMP VI BIASN VGND VDD3v3 comparator-preamp
 Xdec VPAMP VNAMP VOP VON VGND VDD3v3 comparator-decision
 Xdiff VOP VON VOUT2 VGND VDD1v8 comparator-diffamp

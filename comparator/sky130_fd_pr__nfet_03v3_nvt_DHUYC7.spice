@@ -1,0 +1,4 @@
+* SPICE3 file created from sky130_fd_pr__nfet_03v3_nvt_DHUYC7.ext - technology: sky130A
+
+X0 a_25_n21# a_n25_n34# a_n55_n21# w_n80_n50# sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=420000u l=500000u
+X1 a_20_90# a_n30_70# a_n70_90# w_n80_n50# sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
