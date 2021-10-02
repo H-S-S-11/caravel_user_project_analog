@@ -1,0 +1,34 @@
+* scale: 1e6 units = 1 micron
+
+.subckt comparator-preamp VP VN VPAMP VNAMP VI BIASN VGND VPWR
+
+*constant current source: paralleled to allow for size matching
+* X0 VI BIASN VGND VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+* X1 VI BIASN VGND VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+* 
+* *Diff Pair
+* X12 VPAMP VP VI VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+* X13 VNAMP VN VI VGND sky130_fd_pr__nfet_03v3_nvt w=1e+6u l=0.6e+6u
+* 
+* *Load transistors
+* X24 VPWR VPAMP VPAMP VPWR sky130_fd_pr__pfet_g5v0d10v5 w=1.5e+6u l=0.5e+6u
+* X25 VPWR VNAMP VNAMP VPWR sky130_fd_pr__pfet_g5v0d10v5 w=1.5e+6u l=0.5e+6u
+
+* extracted
+*.option scale=1u
+
+* Load
+X2 VPAMP VPAMP VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=-0 ps=0 w=1.5e+06u l=500000u
+X3 VNAMP VNAMP VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0 pd=0 as=-0 ps=0 w=1.5e+06u l=500000u
+
+* Current Sink
+X4 VGND BIASN VI VGND sky130_fd_pr__nfet_03v3_nvt ad=0 pd=0 as=-0 ps=0 w=1e+06u l=600000u
+X6 VI BIASN VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=-0 pd=0 as=0 ps=0 w=1e+06u l=600000u
+
+* Diff pair
+X12 VI VN VNAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0 pd=0 as=-0 ps=0 w=1e+06u l=600000u
+X13 VI VP VPAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=-0 pd=0 as=-0 ps=0 w=1e+06u l=600000u
+C0 VPWR VGND 8.16fF
+
+
+.ends

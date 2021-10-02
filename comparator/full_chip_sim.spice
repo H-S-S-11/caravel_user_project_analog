@@ -1,7 +1,10 @@
-* SPICE3 file created from user_analog_project_wrapper.ext - technology: sky130A
-.include comparator.spice
+* comparator Simulation
+* this file edited to remove everything not in tt lib
+.lib "./sky130_fd_pr/models/sky130.lib.spice" tt
+.include user_analog_project_wrapper.spice
 
-.subckt user_analog_project_wrapper gpio_analog[0] gpio_analog[10] gpio_analog[11]
+* instantiate the comparator
+X1 gpio_analog[0] gpio_analog[10] gpio_analog[11]
 + gpio_analog[12] gpio_analog[13] gpio_analog[14] gpio_analog[15] gpio_analog[16]
 + gpio_analog[17] gpio_analog[1] gpio_analog[2] gpio_analog[3] gpio_analog[4] gpio_analog[5]
 + gpio_analog[6] gpio_analog[7] gpio_analog[8] gpio_analog[9] gpio_noesd[0] gpio_noesd[10]
@@ -89,7 +92,7 @@
 + la_oenb[85] la_oenb[86] la_oenb[87] la_oenb[88] la_oenb[89] la_oenb[8] la_oenb[90]
 + la_oenb[91] la_oenb[92] la_oenb[93] la_oenb[94] la_oenb[95] la_oenb[96] la_oenb[97]
 + la_oenb[98] la_oenb[99] la_oenb[9] user_clock2 user_irq[0] user_irq[1] user_irq[2]
-+ vccd1 vccd2 vdda1 vdda2 vssa1 vssa2 vssd1 vssd2 wb_clk_i wb_rst_i wbs_ack_o wbs_adr_i[0]
++ VDD1v8 VDD1v8 VDD3v3 VDD3v3 VGND VGND VGND VGND wb_clk_i wb_rst_i wbs_ack_o wbs_adr_i[0]
 + wbs_adr_i[10] wbs_adr_i[11] wbs_adr_i[12] wbs_adr_i[13] wbs_adr_i[14] wbs_adr_i[15]
 + wbs_adr_i[16] wbs_adr_i[17] wbs_adr_i[18] wbs_adr_i[19] wbs_adr_i[1] wbs_adr_i[20]
 + wbs_adr_i[21] wbs_adr_i[22] wbs_adr_i[23] wbs_adr_i[24] wbs_adr_i[25] wbs_adr_i[26]
@@ -106,10 +109,41 @@
 + wbs_dat_o[25] wbs_dat_o[26] wbs_dat_o[27] wbs_dat_o[28] wbs_dat_o[29] wbs_dat_o[2]
 + wbs_dat_o[30] wbs_dat_o[31] wbs_dat_o[3] wbs_dat_o[4] wbs_dat_o[5] wbs_dat_o[6]
 + wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0] wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3]
-+ wbs_stb_i wbs_we_i
-C0 vccd2 vdda2 5.27fF
-Xcomparator_0 vssd2 vdda2 vccd2 gpio_analog[17] gpio_analog[16] gpio_analog[15] gpio_analog[14]
-+ comparator
-C1 vssa1 vssd2 2.35fF
-C2 vccd2 vssd2 14.38fF
-.ends
++ wbs_stb_i wbs_we_i user_analog_project_wrapper
+
+* set gnd and power
+Vgnd VGND 0 0
+Vdd3v3 VDD3v3 VGND 3
+Vdd1v8 VDD1v8  VGND 1.8
+
+* set bias voltage
+Vbias BIASN VGND 0.3
+
+VNin VN VGND 1.5
+
+
+* create VP-in
+*VPin VP VGND pulse(0 3 1p 1n 1n 1n 2n)
+VPin VP VGND SINE(1.5 0.2 1Meg)
+*VPin VP VGND 1.5
+
+*connect inputs and outputs
+R0 VP gpio_analog[14] 0
+R1 VN gpio_analog[15] 0
+R2 BIASN gpio_analog[16] 0
+R3 VOUT gpio_analog[17] 0
+
+.tran 100e-12 2000e-09 0e-00
+*.dc VPin 0 3 0.002 VNin 0 3 0.2
+
+.control
+run
+set color0 = white
+set color1 = black
+plot VOUT VP VN VDD3v3
+*plot VPAMP VNAMP VI
+*plot VOP VON
+plot i(Vdd3v3) i(Vdd1v8)
+.endc
+
+.end
