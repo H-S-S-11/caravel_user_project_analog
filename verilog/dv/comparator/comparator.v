@@ -22,7 +22,7 @@
 `include "spiflash.v"
 `include "tbuart.v"
 
-module mprj_por_tb;
+module comparator_tb;
     // Signals declaration
     reg clock;
     reg RSTB;
