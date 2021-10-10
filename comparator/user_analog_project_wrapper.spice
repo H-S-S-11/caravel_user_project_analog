@@ -106,11 +106,10 @@
 + wbs_dat_o[30] wbs_dat_o[31] wbs_dat_o[3] wbs_dat_o[4] wbs_dat_o[5] wbs_dat_o[6]
 + wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0] wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3]
 + wbs_stb_i wbs_we_i
-C0 vccd2 vdda2 19.74fF
+C0 vdda2 vccd2 19.74fF
 Xcomparator_0 vssd2 vdda2 vccd2 io_out[24] gpio_analog[16] gpio_analog[15] gpio_analog[14]
 + comparator
 C1 vssa1 vssd2 2.35fF
 C2 vccd2 vssd2 20.99fF
-C3 comparator_0/VOPAMP vssd2 2.89fF **FLOATING
-C4 comparator_0/VON vssd2 2.03fF **FLOATING
+
 .ends
