@@ -63,12 +63,12 @@ module comparator_tb;
     end
 
     initial begin
-        $dumpfile("mprj_por.vcd");
-        $dumpvars(0, mprj_por_tb);
+        $dumpfile("comparator.vcd");
+        $dumpvars(0, comparator_tb);
 
         // Repeat cycles of 1000 clock edges as needed to complete testbench
         repeat (150) begin
-            repeat (1000) @(posedge clock);
+            repeat (100) @(posedge clock);
         end
         $display("%c[1;31m",27);
         $display ("Monitor: Timeout, Test Project IO Stimulus (RTL) Failed");
@@ -78,19 +78,19 @@ module comparator_tb;
 
     initial begin
         wait(status == 2'h1);
-        $display("Monitor: mprj_por test started");
+        $display("Monitor: comparator test started");
 	#100;
 	if (checkbits != 4'h9) begin
-		$display("Monitor: mprj_por test failed");
+		$display("Monitor: comparator test failed");
 		$finish;
 	end
         wait(status == 2'h3);
 	#100;
 	if (checkbits != 4'h5) begin
-		$display("Monitor: mprj_por test failed");
+		$display("Monitor: comparator test failed");
 		$finish;
 	end
-        $display("Monitor: mprj_por test Passed");
+        $display("Monitor: comparator test Passed");
         #10000;
         $finish;
     end
@@ -111,7 +111,7 @@ module comparator_tb;
         power1 <= 1'b1;
         #200;
         power2 <= 1'b1;
-	#150000;		// Need time to run the managment SoC setup.
+	#15000;		// Need time to run the managment SoC setup.
 	power3 <= 1'b1;		// Power up the 2nd POR.
     end
 
@@ -151,7 +151,7 @@ module comparator_tb;
 
 
     spiflash #(
-        .FILENAME("mprj_por.hex")
+        .FILENAME("comparator.hex")
     ) spiflash (
         .csb(flash_csb),
         .clk(flash_clk),
