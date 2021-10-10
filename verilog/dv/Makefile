@@ -19,7 +19,7 @@
 .SUFFIXES:
 .SILENT: clean all
 
-PATTERNS = mprj_por
+PATTERNS = comparator
 
 all:  ${PATTERNS}
 	for i in ${PATTERNS}; do \

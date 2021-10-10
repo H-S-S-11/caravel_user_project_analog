@@ -40,7 +40,7 @@ SIM?=RTL
 
 .SUFFIXES:
 
-PATTERN = mprj_por
+PATTERN = comparator
 
 all:  ${PATTERN:=.vcd}
 

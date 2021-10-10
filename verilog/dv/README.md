@@ -88,7 +88,7 @@ export UPRJ_ROOT=<user_project_root>
 Then, run the following command to start the docker container :
 
 ```
-docker run -it -v $CARAVEL_ROOT:$CARAVEL_ROOT -v $PDK_PATH:$PDK_PATH -v $UPRJ_ROOT:$UPRJ_ROOT -e CARAVEL_ROOT=$CARAVEL_ROOT -e PDK_PATH=$PDK_PATH -e UPRJ_ROOT=$UPRJ_ROOT -u $(id -u $USER):$(id -g $USER) efabless/dv_setup:latest
+docker run -it -v $CARAVEL_ROOT:$CARAVEL_ROOT -v $PDK_ROOT:$PDK_ROOT -v $UPRJ_ROOT:$UPRJ_ROOT -e CARAVEL_ROOT=$CARAVEL_ROOT -e PDK_ROOT=$PDK_ROOT -e UPRJ_ROOT=$UPRJ_ROOT -u $(id -u $USER):$(id -g $USER) efabless/dv_setup:latest
 ```
 
 Then, navigate to the directory where the DV tests reside : 

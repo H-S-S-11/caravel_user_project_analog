@@ -24,6 +24,7 @@
  *
  *-------------------------------------------------------------
  */
+ `include "comparator.v"
 
 module user_analog_project_wrapper (
 `ifdef USE_POWER_PINS
@@ -125,7 +126,7 @@ module user_analog_project_wrapper (
 wire vout;
 
 assign gpio_analog[17]  = vout;
-assign io_out[24]       = vout
+assign io_out[24]       = vout;
 
 comparator comp_0 (
     `ifdef USE_POWER_PINS

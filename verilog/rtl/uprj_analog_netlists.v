@@ -31,8 +31,6 @@
     `default_nettype wire
     // Use behavorial model with gate-level simulation
     `include "rtl/user_analog_project_wrapper.v"
-    `include "rtl/user_analog_proj_example.v"
 `else
     `include "user_analog_project_wrapper.v"
-    `include "user_analog_proj_example.v"
 `endif
