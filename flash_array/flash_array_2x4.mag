@@ -1,0 +1,8 @@
+magic
+tech sky130A
+timestamp 1633201778
+use sky130_fd_bs_flash__special_sonosfet_star_VH7TJW  sky130_fd_bs_flash__special_sonosfet_star_VH7TJW_0
+timestamp 1633201778
+transform 1 0 291 0 1 371
+box -791 -371 409 429
+<< end >>
