@@ -1,6 +1,6 @@
 * comparator Simulation
 * this file edited to remove everything not in tt lib
-.lib "./sky130_fd_pr/models/sky130.lib.spice" tt
+.lib "~/open_sky130/sky130_fd_pr/models/sky130.lib.spice" tt
 .include comparator.spice
 .include comparator-preamp.spice
 .include comparator-decision.spice
