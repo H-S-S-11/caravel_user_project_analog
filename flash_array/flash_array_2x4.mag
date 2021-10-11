@@ -1,8 +1,77 @@
 magic
 tech sky130A
-timestamp 1633201778
+timestamp 1633983454
+<< dnwell >>
+rect -1700 0 -500 800
+<< pwell >>
+rect -1600 100 -500 700
+<< psubdiff >>
+rect -650 510 -530 530
+rect -650 240 -630 510
+rect -550 240 -530 510
+rect -650 220 -530 240
+<< psubdiffcont >>
+rect -630 240 -550 510
+<< locali >>
+rect -1470 390 -1380 850
+rect -1340 450 -1250 850
+rect -1210 390 -1120 850
+rect -1470 290 -1350 390
+rect -1240 290 -1120 390
+rect -1070 390 -980 850
+rect -940 450 -850 850
+rect -810 390 -720 850
+rect -440 800 -260 850
+rect -170 800 -50 850
+rect -20 800 40 850
+rect 70 800 110 850
+rect 150 800 190 850
+rect 240 800 285 850
+rect 305 800 350 850
+rect 390 800 430 850
+rect 470 800 510 850
+rect -1070 290 -950 390
+rect -840 290 -720 390
+rect -650 510 -530 530
+rect -650 240 -630 510
+rect -550 240 -530 510
+rect 700 430 800 850
+rect 850 320 950 850
+rect -650 220 -530 240
+rect -1400 160 -530 220
+rect -650 -60 -530 160
+rect -170 -60 -50 270
+rect 700 220 950 320
+rect -650 -180 -50 -60
+use sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ  sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ_1
+timestamp 1633982189
+transform 1 0 -1298 0 1 340
+box -102 -140 108 150
+use sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ  sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ_0
+timestamp 1633982189
+transform 1 0 -898 0 1 340
+box -102 -140 108 150
 use sky130_fd_bs_flash__special_sonosfet_star_VH7TJW  sky130_fd_bs_flash__special_sonosfet_star_VH7TJW_0
-timestamp 1633201778
+timestamp 1633983039
 transform 1 0 291 0 1 371
 box -791 -371 409 429
+<< labels >>
+rlabel locali -440 830 -260 850 1 DNWELL
+port 1 n
+rlabel locali -170 830 -50 850 1 PWELL
+port 2 n
+rlabel locali -20 830 40 850 1 ARRAY_SOURCE
+port 3 n
+rlabel locali -1340 830 -1250 850 1 FG0
+port 4 n
+rlabel locali -940 830 -850 850 1 FG1
+port 5 n
+rlabel locali -1470 830 -1380 850 1 FS0
+port 6 n
+rlabel locali -1210 830 -1120 850 1 FD0
+port 7 n
+rlabel locali -1070 830 -980 850 1 FS1
+port 8 n
+rlabel locali -810 830 -720 850 1 FD1
+port 9 n
 << end >>
