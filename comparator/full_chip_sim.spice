@@ -7,13 +7,13 @@
 * instantiate the comparator
 X1 gpio_analog[0] gpio_analog[10] gpio_analog[11]
 + gpio_analog[12] gpio_analog[13] gpio_analog[14] gpio_analog[15] gpio_analog[16]
-+ gpio_analog[1] gpio_analog[2] gpio_analog[3] gpio_analog[4] gpio_analog[5] gpio_analog[6]
-+ gpio_analog[7] gpio_analog[8] gpio_analog[9] gpio_noesd[0] gpio_noesd[10] gpio_noesd[11]
-+ gpio_noesd[12] gpio_noesd[13] gpio_noesd[14] gpio_noesd[15] gpio_noesd[16] gpio_noesd[17]
-+ gpio_noesd[1] gpio_noesd[2] gpio_noesd[3] gpio_noesd[4] gpio_noesd[5] gpio_noesd[6]
-+ gpio_noesd[7] gpio_noesd[8] gpio_noesd[9] io_analog[0] io_analog[10] io_analog[1]
-+ io_analog[2] io_analog[3] io_analog[7] io_analog[8] io_analog[9] io_analog[4] io_analog[5]
-+ io_analog[6] io_clamp_high[0] io_clamp_high[1] io_clamp_high[2] io_clamp_low[0]
++ gpio_analog[17] gpio_analog[1] gpio_analog[2] gpio_analog[3] gpio_analog[4] gpio_analog[5]
++ gpio_analog[6] gpio_analog[7] gpio_analog[8] gpio_analog[9] gpio_noesd[0] gpio_noesd[10]
++ gpio_noesd[11] gpio_noesd[12] gpio_noesd[13] gpio_noesd[14] gpio_noesd[15] gpio_noesd[16]
++ gpio_noesd[17] gpio_noesd[1] gpio_noesd[2] gpio_noesd[3] gpio_noesd[4] gpio_noesd[5]
++ gpio_noesd[6] gpio_noesd[7] gpio_noesd[8] gpio_noesd[9] io_analog[0] io_analog[10]
++ io_analog[1] io_analog[2] io_analog[3] io_analog[7] io_analog[8] io_analog[9] io_analog[4]
++ io_analog[5] io_analog[6] io_clamp_high[0] io_clamp_high[1] io_clamp_high[2] io_clamp_low[0]
 + io_clamp_low[1] io_clamp_low[2] io_in[0] io_in[10] io_in[11] io_in[12] io_in[13]
 + io_in[14] io_in[15] io_in[16] io_in[17] io_in[18] io_in[19] io_in[1] io_in[20] io_in[21]
 + io_in[22] io_in[23] io_in[24] io_in[25] io_in[26] io_in[2] io_in[3] io_in[4] io_in[5]
@@ -132,7 +132,8 @@ VPin VP VGND SINE(1.5 0.5 10Meg)
 R0 VP gpio_analog[14] 0
 R1 VN gpio_analog[15] 0
 R2 BIASN gpio_analog[16] 0
-R3 VOUT io_out[24] 0
+R3 VOUT gpio_analog[17] 0
+R4 VOUT_BUFF io_out[24]
 
 .tran 10e-12 200e-09 0e-00
 *.dc VPin 0 3 0.002 VNin 0 3 0.2
@@ -141,7 +142,7 @@ R3 VOUT io_out[24] 0
 run
 set color0 = white
 set color1 = black
-plot VOUT VP VN VDD3v3
+plot VOUT VOUT_BUFF VP VN VDD3v3
 *plot VPAMP VNAMP VI
 *plot VOP VON
 plot i(Vdd3v3) i(Vdd1v8)

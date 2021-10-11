@@ -1,0 +1,26 @@
+* SPICE3 file created from comparator.ext - technology: sky130A
+
+.subckt comparator VGND VDD3v3 VDD1v8 VOUT BIASN VN VP
+X0 VPAMP VP ISINK VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X1 VGND BIASN ISINK VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X2 VOPAMP VOP DIFFSINK VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X3 DECISINK VON VOP VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X4 VON VNAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X5 ISINK VN VNAMP VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X6 DECISINK VOP VON VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X7 VDD1v8 VOPAMP VOUT VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=2e+06u l=150000u
+X8 DIFFSINK VONAMP VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X9 VPAMP VPAMP VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X10 ISINK BIASN VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X11 DIFFSINK VON VONAMP VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=180000u
+X12 VON VON DECISINK VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X13 VOPAMP VONAMP VDD1v8 VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=3e+06u l=180000u
+X14 VOUT VOPAMP VGND VGND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X15 VDD3v3 VNAMP VNAMP VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X16 VOP VOP DECISINK VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X17 DECISINK DECISINK VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+06u l=600000u
+X18 VDD3v3 VPAMP VOP VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u l=500000u
+X19 VDD1v8 VONAMP VONAMP VDD1v8 sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=3e+06u l=180000u
+C0 VOPAMP VGND 2.89fF
+C1 VON VGND 2.03fF
+.ends
