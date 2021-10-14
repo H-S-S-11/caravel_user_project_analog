@@ -43,12 +43,37 @@ module comparator_tb;
     wire [3:0] checkbits;
     wire [1:0] status;
 
+    wire biasn;
+    reg vp;
+    reg vn;
+    wire vout;
+
     // Signals Assignment
     assign uart_tx = mprj_io[6];
     assign mprj_io[3] = (CSB == 1'b1) ? 1'b1 : 1'bz;
 
-    // Power supply for POR
-    assign mprj_io[18] = power3;
+
+    assign mprj_io[34] = biasn;
+    assign mprj_io[32] = vp;
+    assign mprj_io[33] = vn;
+    assign vout = mprj_io[35];
+
+    assign biasn = 1;
+
+    initial begin
+        vp <= 0;
+        vn <= 0;
+        #700;
+        vp <= 0;
+        vn <= 1;
+        #500;
+        vp <= 1;
+        vn <= 0;
+        #500;
+        vp <= 1;
+        vn <= 1;
+        #500;
+    end
 
     // Readback from POR (digital HV through analog pad connection)
     assign status = {mprj_io[25],  mprj_io[10]};
@@ -66,8 +91,8 @@ module comparator_tb;
         $dumpfile("comparator.vcd");
         $dumpvars(0, comparator_tb);
 
-        // Repeat cycles of 1000 clock edges as needed to complete testbench
-        repeat (150) begin
+        // Repeat cycles of 100 clock edges as needed to complete testbench
+        repeat (2) begin
             repeat (100) @(posedge clock);
         end
         $display("%c[1;31m",27);
@@ -91,7 +116,7 @@ module comparator_tb;
 		$finish;
 	end
         $display("Monitor: comparator test Passed");
-        #10000;
+        #1000;
         $finish;
     end
 
@@ -111,7 +136,7 @@ module comparator_tb;
         power1 <= 1'b1;
         #200;
         power2 <= 1'b1;
-	#15000;		// Need time to run the managment SoC setup.
+	#1500;		// Need time to run the managment SoC setup.
 	power3 <= 1'b1;		// Power up the 2nd POR.
     end
 
