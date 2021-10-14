@@ -80,7 +80,7 @@ make -j$(nproc)
 First, you will need to export a number of environment variables: 
 
 ```bash
-export PDK_PATH=<pdk-location/sky130A>
+export PDK_ROOT=<pdk-location>
 export CARAVEL_ROOT=<caravel_root>
 export UPRJ_ROOT=<user_project_root>
 ```
