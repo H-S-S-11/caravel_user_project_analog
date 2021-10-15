@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -88,8 +88,8 @@ C {devices/lab_pin.sym} 450 -70 0 0 {name=l5 sig_type=std_logic lab=io_out[26:0]
 C {devices/bus_connect.sym} 510 -50 0 0 {name=l6 lab=io_oeb[16:15]}
 C {devices/bus_connect.sym} 600 -50 0 0 {name=l7 lab=io_oeb[12:11]}
 C {devices/code_shown.sym} 920 -130 0 0 {name=s1 only_toplevel=false value=".param mc_mm_switch=0
-.lib /usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-.include /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
+.lib ~/open_sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include ~/open_sky130/sky130A/libs.ref/sky130_fd_sc_hvl/spice/sky130_fd_sc_hvl.spice
 .control
 tran 10u 20m
 plot V(io_out[11]) V(io_out[12]) V(io_out[15]) V(io_out[16])
