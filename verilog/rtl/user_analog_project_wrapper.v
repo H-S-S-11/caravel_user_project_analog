@@ -126,7 +126,7 @@ module user_analog_project_wrapper (
 wire vout;
 
 assign gpio_analog[17]  = vout;
-assign io_out[24]       = vout;
+assign io_out[25]       = vout;
 
 comparator comp_0 (
     `ifdef USE_POWER_PINS
