@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1634127046
+timestamp 1634337368
 << dnwell >>
 rect -1700 0 -500 800
 << pwell >>
@@ -76,37 +76,53 @@ rect 1500 700 2700 800
 rect 1500 -100 1600 700
 rect 2400 -100 2700 700
 rect 1500 -200 2700 -100
-use sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ  sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ_1
-timestamp 1633982189
-transform 1 0 -1298 0 1 340
-box -102 -140 108 150
-use sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ  sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ_0
-timestamp 1633982189
-transform 1 0 -898 0 1 340
-box -102 -140 108 150
 use sky130_fd_bs_flash__special_sonosfet_star_VH7TJW  sky130_fd_bs_flash__special_sonosfet_star_VH7TJW_0
 timestamp 1633983039
 transform 1 0 291 0 1 371
 box -791 -371 409 429
+use sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ  sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ_0
+timestamp 1633982189
+transform 1 0 -898 0 1 340
+box -102 -140 108 150
+use sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ  sky130_fd_bs_flash__special_sonosfet_star_JJF9VQ_1
+timestamp 1633982189
+transform 1 0 -1298 0 1 340
+box -102 -140 108 150
 << labels >>
-rlabel locali -440 830 -260 850 1 DNWELL
-port 1 n
-rlabel locali -170 830 -50 850 1 PWELL
-port 2 n
-rlabel locali -20 830 40 850 1 ARRAY_SOURCE
-port 3 n
-rlabel locali -1340 830 -1250 850 1 FG0
-port 4 n
-rlabel locali -940 830 -850 850 1 FG1
-port 5 n
-rlabel locali -1470 830 -1380 850 1 FS0
-port 6 n
-rlabel locali -1210 830 -1120 850 1 FD0
-port 7 n
-rlabel locali -1070 830 -980 850 1 FS1
-port 8 n
-rlabel locali -810 830 -720 850 1 FD1
-port 9 n
 rlabel metal1 2500 -200 2700 800 1 VGND
 port 10 n
+rlabel locali 70 1280 110 1300 1 SEL_BOT
+port 11 n
+rlabel locali 150 1280 190 1300 1 RA3
+port 12 n
+rlabel locali 240 1280 280 1300 1 RA2
+port 13 n
+rlabel locali 310 1280 350 1300 1 RA1
+port 14 n
+rlabel locali 390 1280 430 1300 1 RA0
+port 15 n
+rlabel locali 470 1280 510 1300 1 SEL_TOP
+port 16 n
+rlabel locali -20 1280 40 1300 1 FLASH_SOURCE
+port 17 n
+rlabel locali 700 1280 800 1300 1 BL0
+port 18 n
+rlabel locali 850 1280 950 1300 1 BL1
+port 19 n
+rlabel locali -170 1280 -50 1300 1 PWELL
+port 2 n
+rlabel locali -440 1280 -260 1300 1 DNWELL
+port 1 n
+rlabel locali -1470 1280 -1380 1300 1 FS0
+port 6 n
+rlabel locali -1340 1280 -1250 1300 1 FG0
+port 4 n
+rlabel locali -1210 1280 -1120 1300 1 FD0
+port 7 n
+rlabel locali -1070 1280 -980 1300 1 FS1
+port 8 n
+rlabel locali -940 1280 -850 1300 1 FG1
+port 5 n
+rlabel locali -810 1280 -720 1300 1 FD1
+port 9 n
 << end >>
