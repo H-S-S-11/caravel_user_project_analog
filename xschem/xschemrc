@@ -272,11 +272,7 @@ set bespice_listen_port 2022
 #### list of tcl files to preload.
 # lappend tcl_files ${XSCHEM_SHAREDIR}/change_index.tcl
 lappend tcl_files ${XSCHEM_SHAREDIR}/ngspice_backannotate.tcl
-<<<<<<< HEAD
 lappend tcl_files ~/open_sky130/sky130A/libs.tech/xschem/scripts/sky130_models.tcl
-=======
-lappend tcl_files $PDKPATH/libs.tech/xschem/scripts/sky130_models.tcl
->>>>>>> f4d92bf2d5dbda8fe5d04d051879691524dcebd0
 ###########################################################################
 #### XSCHEM TOOLBAR
 ###########################################################################
@@ -287,10 +283,6 @@ lappend tcl_files $PDKPATH/libs.tech/xschem/scripts/sky130_models.tcl
 ###########################################################################
 #### SKYWATER PDK SPECIFIC VARIABLES
 ###########################################################################
-<<<<<<< HEAD
-set SKYWATER_MODELS ~/open_sky130/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest
-set SKYWATER_STDCELLS ~/open_sky130/skywater-pdk/libraries/sky130_fd_sc_hd/latest
-=======
 
 ## (spice patched) skywater-pdk install
 # set SKYWATER_MODELS ~/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest
@@ -299,6 +291,5 @@ set SKYWATER_STDCELLS ~/open_sky130/skywater-pdk/libraries/sky130_fd_sc_hd/lates
 ## opencircuitdesign pdks install. You need to change these to point to your open_pdks installation
 # set SKYWATER_MODELS /usr/local/share/pdk/sky130A/libs.tech/ngspice
 # set SKYWATER_STDCELLS /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice
-set SKYWATER_MODELS $PDKPATH/libs.tech/ngspice
-set SKYWATER_STDCELLS $PDKPATH/libs.ref/sky130_fd_sc_hd/spice
->>>>>>> f4d92bf2d5dbda8fe5d04d051879691524dcebd0
+set SKYWATER_MODELS ~open_sky130/sky130A/libs.tech/ngspice
+set SKYWATER_STDCELLS ~open_sky130/sky130A/libs.ref/sky130_fd_sc_hd/spice
