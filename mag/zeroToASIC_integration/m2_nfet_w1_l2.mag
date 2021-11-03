@@ -1,0 +1,45 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1635946216
+<< error_s >>
+rect -383 634 -157 670
+rect -383 552 -347 634
+rect -193 552 -157 634
+rect -383 516 -157 552
+rect -384 -503 -158 -467
+rect -384 -585 -348 -503
+rect -194 -585 -158 -503
+rect -384 -621 -158 -585
+<< pdiff >>
+rect -347 552 -193 634
+rect -348 -585 -194 -503
+<< metal1 >>
+rect -651 551 -207 618
+rect -651 -514 -526 551
+rect -470 -30 -78 114
+rect -651 -581 -207 -514
+rect -651 -811 -526 -581
+rect -22 -664 103 533
+use sky130_fd_pr__nfet_g5v0d10v5_DPU6YB  sky130_fd_pr__nfet_g5v0d10v5_DPU6YB_0
+array 0 0 0 0 1 500
+timestamp 1635946216
+transform 1 0 -274 0 1 -208
+box -284 -188 284 188
+use contact$3  contact$3_0
+timestamp 1635946216
+transform 1 0 -270 0 1 593
+box -69 -33 69 33
+use contact$2  contact$2_0
+timestamp 1635946216
+transform 1 0 -270 0 1 593
+box -103 -67 103 67
+use contact$3  contact$3_1
+timestamp 1635946216
+transform 1 0 -271 0 1 -544
+box -69 -33 69 33
+use contact$2  contact$2_1
+timestamp 1635946216
+transform 1 0 -271 0 1 -544
+box -103 -67 103 67
+<< end >>

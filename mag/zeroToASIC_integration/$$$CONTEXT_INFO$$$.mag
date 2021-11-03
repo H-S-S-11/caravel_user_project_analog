@@ -1,0 +1,21 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1635946216
+use contact  contact_0
+timestamp 1635946216
+transform 1 0 0 0 1 0
+box 0 0 1 1
+use contact$3  contact$3_0
+timestamp 1635946216
+transform 1 0 0 0 1 0
+box -69 -33 69 33
+use contact$2  contact$2_0
+timestamp 1635946216
+transform 1 0 0 0 1 0
+box -103 -67 103 67
+use contact$4  contact$4_0
+timestamp 1635946216
+transform 1 0 0 0 1 0
+box -64 -32 64 32
+<< end >>

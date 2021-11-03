@@ -1,0 +1,41 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1635946216
+<< error_s >>
+rect -730 1291 -524 1425
+rect 270 1291 476 1425
+rect -947 664 -917 1196
+rect -881 730 -851 1130
+rect -395 730 -365 1130
+rect -329 664 -299 1196
+rect 53 664 83 1196
+rect 119 730 149 1130
+rect 605 730 635 1130
+rect 671 664 701 1196
+rect -947 -76 -917 456
+rect -881 -10 -851 390
+rect -395 -10 -365 390
+rect -329 -76 -299 456
+rect 53 -76 83 456
+rect 119 -10 149 390
+rect 605 -10 635 390
+rect 671 -76 701 456
+rect -733 -314 -527 -180
+rect 267 -314 473 -180
+<< metal1 >>
+rect -1298 1572 125 1691
+rect -427 477 -371 643
+<< metal2 >>
+rect -684 525 456 600
+use contact$4  contact$4_0
+array 0 1 1000 0 0 0
+timestamp 1635946216
+transform 1 0 -613 0 1 564
+box -64 -32 64 32
+use m2_pfet_w2_l2  m2_pfet_w2_l2_0
+array 0 1 1000 0 0 0
+timestamp 1635946216
+transform 1 0 -623 0 1 190
+box -385 -659 385 1382
+<< end >>
