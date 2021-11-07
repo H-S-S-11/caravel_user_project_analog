@@ -1,8 +1,0 @@
-magic
-tech sky130A
-timestamp 1635946216
-use sky130_fd_pr__nfet_g5v0d10v5_DPU6YB  sky130_fd_pr__nfet_g5v0d10v5_DPU6YB_0
-timestamp 1635946216
-transform 1 0 129 0 1 94
-box -142 -94 142 94
-<< end >>
