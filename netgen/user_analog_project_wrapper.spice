@@ -107,11 +107,43 @@
 + wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0] wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3]
 + wbs_stb_i wbs_we_i
 R0 io_out[25] gpio_analog[17] sky130_fd_pr__res_generic_m2 w=6e+06u l=6e+06u
-C0 vdda2 vccd2 19.74fF
+C0 myopamp_flat_0/a_3424_7369# myopamp_flat_0/vdd 8.96fF
+C1 vccd2 vdda2 19.74fF
+C2 myopamp_flat_0/a_n4008_3630# myopamp_flat_0/in_p 4.26fF
+C3 myopamp_flat_0/out myopamp_flat_0/vdd 6.05fF
+C4 myopamp_flat_0/a_3424_7369# myopamp_flat_0/a_21439_8488# 513.13fF
+C5 myopamp_flat_0/a_n4008_3630# myopamp_flat_0/a_3424_7369# 13.74fF
+C6 analog_mux_0/VOUT analog_mux_0/EN 5.84fF
+C7 analog_mux_0/SELECT analog_mux_0/EN 6.07fF
+C8 myopamp_flat_0/a_3424_7369# myopamp_flat_0/out 4.20fF
+C9 vssa2 vccd2 19.74fF
+C10 analog_mux_0/VOUT analog_mux_0/ENB0 2.43fF
+C11 myopamp_flat_0/a_n4266_3630# myopamp_flat_0/vdd 2.09fF
+C12 analog_mux_0/VOUT analog_mux_0/VIN1 4.85fF
+C13 myopamp_flat_0/out myopamp_flat_0/bias 3.22fF
+C14 analog_mux_0/VOUT analog_mux_0/EN1 2.87fF
+C15 myopamp_flat_0/a_n4008_3630# myopamp_flat_0/in_n 4.06fF
+C16 myopamp_flat_0/a_n4008_3630# myopamp_flat_0/a_n4266_3630# 13.74fF
+C17 analog_mux_0/VOUT analog_mux_0/SELECT 3.50fF
+C18 analog_mux_0/VPWR analog_mux_0/VOUT 12.34fF
+C19 analog_mux_0/VOUT analog_mux_0/VIN0 4.85fF
+Xanalog_mux_0 vssd2 analog_mux_0/VPWR analog_mux_0/VIN1 analog_mux_0/VIN0 analog_mux_0/VOUT
++ analog_mux_0/EN analog_mux_0/SELECT analog_mux
+Xmyopamp_flat_0 vssd2 myopamp_flat_0/bias myopamp_flat_0/vdd myopamp_flat_0/out myopamp_flat_0/in_n
++ myopamp_flat_0/in_p myopamp_flat
 Xcomparator_0 vssd2 vdda2 vccd2 gpio_analog[17] gpio_analog[16] gpio_analog[15] gpio_analog[14]
 + comparator
-C1 vssa1 vssd2 2.35fF
-C2 vccd2 vssd2 20.99fF
-C3 comparator_0/VOPAMP vssd2 2.89fF **FLOATING
-C4 comparator_0/VON vssd2 2.03fF **FLOATING
+C20 vssa1 vssd2 2.35fF
+C21 vccd2 vssd2 20.99fF
+C22 comparator_0/VOPAMP vssd2 2.89fF **FLOATING
+C23 comparator_0/VON vssd2 2.03fF **FLOATING
+C24 myopamp_flat_0/bias vssd2 26.76fF
+C25 myopamp_flat_0/out vssd2 38.52fF
+C26 myopamp_flat_0/vdd vssd2 74.61fF
+C27 myopamp_flat_0/a_n4008_3630# vssd2 26.41fF **FLOATING
+C28 myopamp_flat_0/a_21439_8488# vssd2 111.08fF **FLOATING
+C29 myopamp_flat_0/a_3424_7369# vssd2 50.37fF **FLOATING
+C30 myopamp_flat_0/a_n4266_3630# vssd2 17.96fF **FLOATING
+C31 analog_mux_0/ENB0 vssd2 2.84fF
+C32 analog_mux_0/VOUT vssd2 2.00fF
 .ends
