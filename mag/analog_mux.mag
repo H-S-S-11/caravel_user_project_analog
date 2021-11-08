@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1635205324
+timestamp 1636413257
 << nwell >>
 rect 1400 1950 2150 2700
 rect 1350 -2650 2150 -2000
@@ -431,13 +431,13 @@ rect 2150 -2160 2650 -1900
 rect 2150 -2540 2160 -2160
 rect 2340 -2540 2650 -2160
 rect 2150 -2700 2650 -2540
-use analog_switch  analog_switch_1
-timestamp 1634764606
-transform 1 0 500 0 1 -1150
-box -500 -750 2250 1100
 use analog_switch  analog_switch_0
-timestamp 1634764606
+timestamp 1636413257
 transform 1 0 500 0 1 750
+box -500 -750 2250 1100
+use analog_switch  analog_switch_1
+timestamp 1636413257
+transform 1 0 500 0 1 -1150
 box -500 -750 2250 1100
 << labels >>
 rlabel locali 990 -2040 1040 -1990 1 EN0

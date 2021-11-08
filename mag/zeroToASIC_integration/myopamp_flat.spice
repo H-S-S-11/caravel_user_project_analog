@@ -1,0 +1,85 @@
+* SPICE3 file created from myopamp_flat.ext - technology: sky130A
+
+.subckt myopamp_flat in_n in_p vdd bias out vss
+X0 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X1 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X2 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X3 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X4 bias bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X5 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X6 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X7 a_3424_7369# a_21439_8488# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X8 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X9 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X10 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X11 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X12 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X13 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X14 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X15 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X16 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X17 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X18 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X19 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X20 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X21 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X22 a_3424_7369# a_21439_8488# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X23 a_3424_7369# a_n4266_3630# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X24 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X25 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X26 a_3424_7369# a_21439_8488# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X27 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X28 a_n4008_3630# bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X29 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X30 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X31 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X32 a_n4266_3630# a_n4266_3630# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X33 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X34 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X35 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X36 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X37 bias bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X38 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X39 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X40 a_3424_7369# a_21439_8488# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X41 out a_21439_8488# vss sky130_fd_pr__res_xhigh_po w=690000u l=1e+07u
+X42 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X43 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X44 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X45 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X46 a_3424_7369# a_21439_8488# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X47 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X48 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X49 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X50 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X51 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X52 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X53 a_3424_7369# a_n4266_3630# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X54 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X55 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X56 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X57 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X58 a_n4266_3630# a_n4266_3630# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X59 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X60 a_n4008_3630# in_n a_n4266_3630# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X61 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+X62 out bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X63 a_n4008_3630# bias vss vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=2e+06u
+X64 a_3424_7369# a_21439_8488# sky130_fd_pr__cap_mim_m3_1 l=3e+07u w=3e+07u
+X65 out a_3424_7369# vdd vdd sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=2e+06u l=2e+06u
+X66 a_n4008_3630# in_p a_3424_7369# vss sky130_fd_pr__nfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+07u l=1e+06u
+C0 a_n4008_3630# a_n4266_3630# 13.74fF
+C1 vdd a_n4266_3630# 2.09fF
+C2 bias out 3.22fF
+C3 a_3424_7369# out 4.20fF
+C4 a_3424_7369# a_n4008_3630# 13.74fF
+C5 a_3424_7369# vdd 8.96fF
+C6 out vdd 6.05fF
+C7 a_3424_7369# a_21439_8488# 513.13fF
+C8 in_n a_n4008_3630# 4.06fF
+C9 in_p a_n4008_3630# 4.26fF
+C10 a_n4008_3630# vss 26.41fF
+C11 a_21439_8488# vss 111.08fF
+C12 a_3424_7369# vss 50.37fF
+C13 a_n4266_3630# vss 17.96fF
+.ends
