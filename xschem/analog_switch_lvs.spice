@@ -1,0 +1,8 @@
+* NGSPICE file created from analog_switch.ext - technology: sky130A
+
+.subckt analog_switch VOUT VIN EN ENB VDD3v3 VGND
+X0 VIN ENB VOUT VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=7e+06u l=500000u
+X1 VOUT EN VIN VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X2 VOUT ENB VIN VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=7e+06u l=500000u
+.ends
+

@@ -1,0 +1,30 @@
+** NGSPICE file created from analog_mux.ext - technology: sky130A
+
+.subckt analog_switch VOUT VIN EN ENB VDD3v3 VGND
+X0 VIN ENB VOUT VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=7e+06u l=500000u
+X1 VOUT EN VIN VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=1e+07u l=500000u
+X2 VOUT ENB VIN VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=7e+06u l=500000u
+.ends
+
+.subckt analog_mux VGND VPWR VIN1 VIN0 VOUT EN SELECT
+Xanalog_switch_0 VOUT VIN1 EN1 EN1 VPWR VGND analog_switch
+Xanalog_switch_1 VOUT VIN0 EN0 ENB0 VPWR VGND analog_switch
+X0 EN0 ENB0 VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+X1 EN1 EN VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=-0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X2 VPWR EN ENB0 VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X3 a_980_2320# EN EN1 VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+X4 VPWR EN1 EN1 VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=500000u
+X5 EN0 ENB0 VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X6 EN1 EN1 VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+X7 SELECT SELECT VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X8 SELECT SELECT VGND VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+X9 a_980_n2420# SELECT ENB0 VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+X10 VPWR SELECT EN1 VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=-0p ps=0u w=1e+06u l=500000u
+X11 ENB0 SELECT VPWR VPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1e+06u l=500000u
+X12 VGND SELECT a_980_2320# VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+X13 VGND EN a_980_n2420# VGND sky130_fd_pr__nfet_03v3_nvt ad=0p pd=0u as=0p ps=0u w=700000u l=500000u
+.ends
+
+Xanalog_mux VGND VPWR VIN1 VIN0 VOUT EN SELECT analog_mux
+
+.end
