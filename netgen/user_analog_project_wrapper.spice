@@ -88,7 +88,7 @@
 + la_oenb[85] la_oenb[86] la_oenb[87] la_oenb[88] la_oenb[89] la_oenb[8] la_oenb[90]
 + la_oenb[91] la_oenb[92] la_oenb[93] la_oenb[94] la_oenb[95] la_oenb[96] la_oenb[97]
 + la_oenb[98] la_oenb[99] la_oenb[9] user_clock2 user_irq[0] user_irq[1] user_irq[2]
-+ vccd1 vccd2 vdda1 vdda2 vssd2 vssa2 vssd1 wb_clk_i wb_rst_i wbs_ack_o wbs_adr_i[0]
++ vccd1 vccd2 vdda1 vdda2 vssa1 vssa2 vssd1 vssd2 wb_clk_i wb_rst_i wbs_ack_o wbs_adr_i[0]
 + wbs_adr_i[10] wbs_adr_i[11] wbs_adr_i[12] wbs_adr_i[13] wbs_adr_i[14] wbs_adr_i[15]
 + wbs_adr_i[16] wbs_adr_i[17] wbs_adr_i[18] wbs_adr_i[19] wbs_adr_i[1] wbs_adr_i[20]
 + wbs_adr_i[21] wbs_adr_i[22] wbs_adr_i[23] wbs_adr_i[24] wbs_adr_i[25] wbs_adr_i[26]
@@ -106,49 +106,52 @@
 + wbs_dat_o[30] wbs_dat_o[31] wbs_dat_o[3] wbs_dat_o[4] wbs_dat_o[5] wbs_dat_o[6]
 + wbs_dat_o[7] wbs_dat_o[8] wbs_dat_o[9] wbs_sel_i[0] wbs_sel_i[1] wbs_sel_i[2] wbs_sel_i[3]
 + wbs_stb_i wbs_we_i
-R0 io_out[25] gpio_analog[17] sky130_fd_pr__res_generic_m2 w=6e+06u l=6e+06u
-C0 myopamp_flat_0/a_3424_7369# gpio_analog[3] 4.20fF
-C1 io_in_3v3[16] gpio_analog[11] 6.69fF
-C2 vccd2 gpio_analog[11] 7.33fF
-C3 myopamp_flat_0/a_n4266_3630# myopamp_flat_0/a_n4008_3630# 13.74fF
-C4 gpio_analog[0] gpio_analog[3] 3.22fF
-C5 vccd2 vdda2 19.74fF
-C6 gpio_analog[12] vccd2 7.33fF
-C7 myopamp_flat_0/a_3424_7369# vdda1 8.96fF
-C8 myopamp_flat_0/a_21439_8488# myopamp_flat_0/a_3424_7369# 513.13fF
-C9 io_in_3v3[16] io_in_3v3[17] 6.66fF
-C10 gpio_analog[1] myopamp_flat_0/a_n4008_3630# 4.06fF
-C11 gpio_analog[11] analog_mux_0/EN1 2.87fF
-C12 vdda2 gpio_analog[11] 12.34fF
-C13 gpio_analog[12] gpio_analog[11] 4.85fF
-C14 vccd2 io_in_3v3[17] 3.45fF
-C15 gpio_analog[2] myopamp_flat_0/a_n4008_3630# 4.26fF
-C16 analog_mux_0/ENB0 gpio_analog[11] 2.43fF
-C17 io_in_3v3[17] gpio_analog[11] 9.03fF
-C18 myopamp_flat_0/a_3424_7369# myopamp_flat_0/a_n4008_3630# 13.74fF
-C19 vccd2 gpio_analog[13] 7.33fF
-C20 vdda1 gpio_analog[3] 6.05fF
-C21 io_in_3v3[16] vccd2 3.45fF
-C22 myopamp_flat_0/a_n4266_3630# vdda1 2.09fF
-C23 gpio_analog[11] gpio_analog[13] 4.85fF
-C24 vssa2 vccd2 19.74fF
+R0 vssa1 vssd2 sky130_fd_pr__res_generic_m1 w=4e+06u l=1e+06u
+R1 io_out[25] gpio_analog[17] sky130_fd_pr__res_generic_m2 w=6e+06u l=6e+06u
+C0 gpio_analog[11] io_in_3v3[17] 9.03fF
+C1 io_in_3v3[17] io_in_3v3[16] 6.66fF
+C2 gpio_analog[3] vdda1 6.05fF
+C3 vccd2 io_in_3v3[17] 3.45fF
+C4 gpio_analog[11] vdda2 12.34fF
+C5 gpio_analog[13] gpio_analog[11] 4.85fF
+C6 myopamp_flat_0/a_n4008_3630# gpio_analog[2] 4.26fF
+C7 vdda2 vccd2 19.74fF
+C8 gpio_analog[13] vccd2 7.33fF
+C9 myopamp_flat_0/a_3424_7369# myopamp_flat_0/a_n4008_3630# 13.74fF
+C10 gpio_analog[11] gpio_analog[12] 4.85fF
+C11 myopamp_flat_0/a_3424_7369# myopamp_flat_0/a_21439_8488# 513.13fF
+C12 vccd2 gpio_analog[12] 7.33fF
+C13 vdda1 myopamp_flat_0/a_n4266_3630# 2.09fF
+C14 myopamp_flat_0/a_3424_7369# gpio_analog[3] 4.20fF
+C15 analog_mux_0/ENB0 gpio_analog[11] 2.43fF
+C16 gpio_analog[11] io_in_3v3[16] 6.69fF
+C17 vssa2 vccd2 19.74fF
+C18 gpio_analog[1] myopamp_flat_0/a_n4008_3630# 4.06fF
+C19 myopamp_flat_0/a_n4008_3630# myopamp_flat_0/a_n4266_3630# 13.74fF
+C20 gpio_analog[11] vccd2 7.33fF
+C21 vccd2 io_in_3v3[16] 3.45fF
+C22 gpio_analog[11] analog_mux_0/EN1 2.87fF
+C23 myopamp_flat_0/a_3424_7369# vdda1 8.96fF
+C24 gpio_analog[3] gpio_analog[0] 3.22fF
+C25 vssa1 vdda1 19.74fF
 Xanalog_mux_0 vssd2 vdda2 gpio_analog[12] gpio_analog[13] gpio_analog[11] io_in_3v3[17]
 + io_in_3v3[16] analog_mux
 Xmyopamp_flat_0 gpio_analog[1] gpio_analog[2] vdda1 gpio_analog[0] gpio_analog[3]
 + vssd2 myopamp_flat
 Xcomparator_0 vssd2 vdda2 vccd2 gpio_analog[17] gpio_analog[16] gpio_analog[15] gpio_analog[14]
 + comparator
-C25 vccd2 vssd2 20.99fF
-C26 comparator_0/VOPAMP vssd2 2.89fF **FLOATING
-C27 comparator_0/VON vssd2 2.03fF **FLOATING
-C28 gpio_analog[0] vssd2 2.97fF
-C29 gpio_analog[1] vssd2 2.95fF
-C30 myopamp_flat_0/a_n4008_3630# vssd2 26.41fF **FLOATING
-C31 myopamp_flat_0/a_21439_8488# vssd2 111.08fF **FLOATING
-C32 myopamp_flat_0/a_3424_7369# vssd2 50.37fF **FLOATING
-C33 myopamp_flat_0/a_n4266_3630# vssd2 17.96fF **FLOATING
-C34 analog_mux_0/ENB0 vssd2 2.84fF
-C35 gpio_analog[11] vssd2 2.62fF
-C36 gpio_analog[13] vssd2 2.11fF
-C37 gpio_analog[12] vssd2 2.11fF
+C26 vssa1 vssd2 2.35fF
+C27 vccd2 vssd2 20.99fF
+C28 comparator_0/VOPAMP vssd2 2.89fF **FLOATING
+C29 comparator_0/VON vssd2 2.03fF **FLOATING
+C30 gpio_analog[0] vssd2 2.97fF
+C31 gpio_analog[1] vssd2 2.95fF
+C32 myopamp_flat_0/a_n4008_3630# vssd2 26.41fF **FLOATING
+C33 myopamp_flat_0/a_21439_8488# vssd2 111.08fF **FLOATING
+C34 myopamp_flat_0/a_3424_7369# vssd2 50.37fF **FLOATING
+C35 myopamp_flat_0/a_n4266_3630# vssd2 17.96fF **FLOATING
+C36 analog_mux_0/ENB0 vssd2 2.84fF
+C37 gpio_analog[11] vssd2 2.62fF
+C38 gpio_analog[13] vssd2 2.11fF
+C39 gpio_analog[12] vssd2 2.11fF
 .ends
