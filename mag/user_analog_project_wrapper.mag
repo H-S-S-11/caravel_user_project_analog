@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1636502316
+timestamp 1636538618
 << locali >>
 rect 6700 106200 7700 106500
 rect 7300 106140 7700 106200
@@ -1110,18 +1110,18 @@ rect -100 704000 584100 704100
 rect -100 0 0 704000
 rect 584000 0 584100 704000
 rect -100 -100 584100 0
-use myopamp_flat  myopamp_flat_0 zeroToASIC_integration
-timestamp 1636387338
+use myopamp_flat  myopamp_flat_0
+timestamp 1636538588
 transform 1 0 434519 0 1 332532
 box -9200 490 33850 17218
-use comparator  comparator_0 comparator
-timestamp 1633173780
-transform 1 0 8860 0 1 105800
-box -860 -2200 2900 600
 use analog_mux  analog_mux_0
 timestamp 1636416019
 transform 1 0 41360 0 1 296524
 box -100 -5400 6600 5500
+use comparator  comparator_0 comparator
+timestamp 1633173780
+transform 1 0 8860 0 1 105800
+box -860 -2200 2900 600
 << labels >>
 flabel metal3 s 583520 269230 584800 269342 0 FreeSans 1120 0 0 0 gpio_analog[0]
 port 0 nsew signal bidirectional
