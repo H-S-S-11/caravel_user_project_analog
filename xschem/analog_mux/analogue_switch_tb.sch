@@ -47,7 +47,7 @@ C {devices/lab_pin.sym} 1840 -1050 0 0 {name=l2 sig_type=std_logic lab=VOUT}
 C {devices/code_shown.sym} 1610 -810 0 0 {name=s2 only_toplevel=false value=".control
 tran 0.1n 100n
 plot V(vdd3v3) V(VOUT) VIN ENB EN
-plot I(V1) I(V2) I(R1)
+plot I(V1) I(V2)
 .endc"}
 C {devices/vsource.sym} 1100 -1050 0 0 {name=V2 value="SIN(1.6 1.6 100Meg 0 0)"}
 C {devices/lab_pin.sym} 1250 -1100 0 0 {name=l4 sig_type=std_logic lab=ENB}

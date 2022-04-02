@@ -6,8 +6,8 @@
 *.ipin VIN1
 *.ipin EN
 *.ipin SELECT
-x1 VIN0 VGND VDD3v3 !EN0 EN0 VOUT analogue_switch
-x2 VIN1 VGND VDD3v3 !EN1 EN1 VOUT analogue_switch
+x1 VGND VDD3v3 VIN0 !EN0 EN0 VOUT analogue_switch
+x2 VGND VDD3v3 VIN1 !EN1 EN1 VOUT analogue_switch
 XM3 !EN1 SELECT VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
@@ -53,19 +53,30 @@ XM14 !EN0 !SELECT VDD3v3 VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 ad='
 **.ends
 
 * expanding   symbol:  analogue_switch.sym # of pins=6
-* sym_path: /home/hss11/winhome/caravel_user_project_analog/xschem/analogue_switch.sym
-* sch_path: /home/hss11/winhome/caravel_user_project_analog/xschem/analogue_switch.sch
-.subckt analogue_switch  VIN VGND VDD3v3 !EN EN VOUT
-*.iopin VGND
-*.iopin VDD3v3
+* sym_path:
+*+ /home/hss11/winhome/skywater-shuttle/caravel_user_project_analog/xschem/analog_mux/analogue_switch.sym
+* sch_path:
+*+ /home/hss11/winhome/skywater-shuttle/caravel_user_project_analog/xschem/analog_mux/analogue_switch.sch
+.subckt analogue_switch  VGND VDD3v3 VIN !EN EN VOUT
 *.ipin EN
 *.ipin VIN
-*.ipin !EN
 *.opin VOUT
-XM2 VOUT !EN VIN VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=7 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
+*.ipin !EN
+*.iopin VGND
+*.iopin VDD3v3
+XM2 mid !EN VIN VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
 + as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
 + nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2 
-XM1 VIN EN VOUT VGND sky130_fd_pr__nfet_03v3_nvt L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM1 VIN EN mid VGND sky130_fd_pr__nfet_03v3_nvt L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=2 m=2 
+XM3 mid !EN VGND VGND sky130_fd_pr__nfet_03v3_nvt L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 VOUT !EN mid VDD3v3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2 
+XM5 mid EN VOUT VGND sky130_fd_pr__nfet_03v3_nvt L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=2 m=2 
 .ends

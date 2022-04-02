@@ -1,0 +1,15 @@
+* mim_test
+
+.lib ~/open_sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+V1 VIN GND PWL(0ns 0V 50ns 0V 51ns 3V 100ns 3V)
+
+R1 VIN VOUT 10k
+XC1 VOUT GND sky130_fd_pr__cap_mim_m3_1 W=3e+07u L=3e+07u m=1
+
+.control
+tran 1n 200n
+plot V(VIN) V(vout)
+.endc
+
+.end
