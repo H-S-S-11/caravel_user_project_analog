@@ -1,0 +1,64 @@
+**.subckt delay_cell_tb
+x1 VPWR CONT_P net2 MID CONT_N GND delay_cell
+V1 IN GND PULSE(0 1.8 1n 0.1n 0.1n 5n)
+V2 VPWR GND 1.8
+XM1 CONT_P CONT_N GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 CONT_P CONT_P VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+V3 CONT_N GND 0.3
+x2 VPWR CONT_P MID net4 CONT_N GND delay_cell
+x3 VPWR CONT_P net1 net2 CONT_N GND delay_cell
+x4 VPWR CONT_P net3 net1 CONT_N GND delay_cell
+x5 VPWR CONT_P net4 net3 CONT_N GND delay_cell
+XM3 OUT net1 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 OUT net1 VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+**** begin user architecture code
+
+
+.lib ~/open_sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+.control
+tran 100n 1m uic
+plot V(OUT) V(MID)
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  delay_cell.sym # of pins=6
+* sym_path:
+*+ /home/hss11/winhome/skywater-shuttle/caravel_user_project_analog/xschem/ring_osc/delay_cell.sym
+* sch_path:
+*+ /home/hss11/winhome/skywater-shuttle/caravel_user_project_analog/xschem/ring_osc/delay_cell.sch
+.subckt delay_cell  VPWR CONT_P IN OUT CONT_N VGND
+*.ipin VPWR
+*.ipin VGND
+*.ipin IN
+*.ipin CONT_N
+*.ipin CONT_P
+*.opin OUT
+XM1 OUT IN net1 VGND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 net1 CONT_N VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 OUT IN net2 VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 net2 CONT_P VPWR VPWR sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29'
++ as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)'
++ nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL GND
+** flattened .save nodes
+.end
